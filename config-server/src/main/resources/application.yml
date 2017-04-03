@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/zlaval/ConfigData
+          uri: https://github.com/zlaval/CarCreatorConfiguration
 
 server:
   port: 8001
