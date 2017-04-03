@@ -1,0 +1,10 @@
+subprojects {
+    group = "com.zlrx.javadevzed.microservice"
+    archivesBaseName = "clients-${it.name}"
+
+    dependencies {
+        compile 'org.springframework.cloud:spring-cloud-config-client'
+        compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    }
+
+}
