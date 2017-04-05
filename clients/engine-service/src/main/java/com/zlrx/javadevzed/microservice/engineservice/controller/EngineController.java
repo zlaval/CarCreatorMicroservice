@@ -1,4 +1,4 @@
-package com.zlrx.javadevzed.microservice.controller;
+package com.zlrx.javadevzed.microservice.engineservice.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

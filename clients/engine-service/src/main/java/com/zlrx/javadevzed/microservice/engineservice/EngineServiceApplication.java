@@ -1,4 +1,4 @@
-package com.zlrx.javadevzed.microservice;
+package com.zlrx.javadevzed.microservice.engineservice;
 
 
 import org.springframework.boot.SpringApplication;

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: wheel-service
+  profiles:
+    active: wheel
+  cloud:
+    config:
+      uri: http://localhost:8001
+---
+eureka:
+  instance:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

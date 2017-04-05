@@ -1,4 +1,4 @@
-package com.zlrx.javadevzed.microservice;
+package com.zlrx.javadevzed.microservice.wheelservice;
 
 
 import org.springframework.boot.SpringApplication;
@@ -7,8 +7,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class CreatorUiApplication {
-    public static void main(String... args) {
-        SpringApplication.run(CreatorUiApplication.class, args);
+public class WheelServiceApplication {
+
+
+    public static void main(String[] args) {
+        SpringApplication.run(WheelServiceApplication.class, args);
     }
+
 }
