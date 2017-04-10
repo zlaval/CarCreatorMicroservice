@@ -1,16 +1,14 @@
-package com.zlrx.javadevzed.microservice.creatorui;
+package com.zlrx.javadevzed.microservice.chassisservice;
 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public class CreatorUiApplication {
+public class ChassisServiceApplication {
     public static void main(String... args) {
-        SpringApplication.run(CreatorUiApplication.class, args);
+        SpringApplication.run(ChassisServiceApplication.class, args);
     }
 }
