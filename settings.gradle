@@ -13,4 +13,6 @@ include 'clients:chassis-interface'
 findProject(':clients:chassis-interface')?.name = 'chassis-interface'
 include 'clients:engine-interface'
 findProject(':clients:engine-interface')?.name = 'engine-interface'
+include 'clients:wheel-interface'
+findProject(':clients:wheel-interface')?.name = 'wheel-interface'
 
