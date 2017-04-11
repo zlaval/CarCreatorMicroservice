@@ -3,7 +3,6 @@ subprojects {
     archivesBaseName = "clients-${it.name}"
 
     dependencies {
-        compile group: 'org.projectlombok', name: 'lombok', version: '1.16.16'
         compile 'org.springframework.cloud:spring-cloud-config-client'
         compile 'org.springframework.cloud:spring-cloud-starter-eureka'
         compile 'org.springframework.cloud:spring-cloud-starter-ribbon'

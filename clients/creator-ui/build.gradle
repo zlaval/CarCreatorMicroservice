@@ -1,3 +1,4 @@
 dependencies{
     compile project (':clients:chassis-interface')
+    compile project (':clients:engine-interface')
 }

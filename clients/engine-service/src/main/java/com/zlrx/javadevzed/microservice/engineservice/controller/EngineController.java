@@ -1,6 +1,7 @@
 package com.zlrx.javadevzed.microservice.engineservice.controller;
 
 
+import com.zlrx.javadevzed.microservice.engineinterface.Engine;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,11 +12,11 @@ import java.util.List;
 public class EngineController {
 
     @RequestMapping("/")
-    public List<String> getEngines() {
-        List<String> engines = new ArrayList<>();
-        engines.add("V6");
-        engines.add("V8");
-        engines.add("V12");
+    public List<Engine> getEngines() {
+        List<Engine> engines = new ArrayList<>();
+        engines.add(new Engine("BMW",2400,12));
+        engines.add(new Engine("Lada",1000,3));
+        engines.add(new Engine("Suzuki",1400,4));
         return engines;
     }
 

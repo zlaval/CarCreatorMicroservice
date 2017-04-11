@@ -3,6 +3,8 @@ package com.zlrx.javadevzed.microservice.creatorui.controller;
 
 import com.zlrx.javadevzed.microservice.chassisinterface.Chassis;
 import com.zlrx.javadevzed.microservice.creatorui.client.ChassisRestClient;
+import com.zlrx.javadevzed.microservice.creatorui.client.EngineRestClient;
+import com.zlrx.javadevzed.microservice.engineinterface.Engine;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,11 +23,12 @@ public class TestController {
     @Inject
     private ChassisRestClient chassisRestClient;
 
-    @RequestMapping("/carpart")
-    public List<String> getCarParts() {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("engine-service");
-        List<String> engines = new RestTemplate().getForObject(serviceInstance.getUri(), List.class);
-        return engines;
+    @Inject
+    private EngineRestClient engineRestClient;
+
+    @RequestMapping("/engine")
+    public List<Engine> getCarParts() {
+       return engineRestClient.getEngine();
     }
 
     @RequestMapping("/wheel")
