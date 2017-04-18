@@ -25,7 +25,6 @@ public class CarpartServiceImpl implements CarpartService {
     @Inject
     private WheelRestClient wheelRestClient;
 
-
     @Override
     @HystrixCommand(fallbackMethod = "getDefaultChassis")
     public List<Chassis> getChassis() {
@@ -44,20 +43,16 @@ public class CarpartServiceImpl implements CarpartService {
         return engineRestClient.getEngine();
     }
 
-
     private List<Chassis> getDefaultChassis() {
         return Collections.singletonList(new Chassis("Chassis default", 1, "gray"));
     }
-
 
     private List<Wheel> getDefaultWheel() {
         return Collections.singletonList(new Wheel(205, 45, 17));
     }
 
-
     private List<Engine> getDefaultEngine() {
         return Collections.singletonList(new Engine("Engine default", 250, 12));
     }
-
 
 }
